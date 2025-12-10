@@ -1,0 +1,17 @@
+.footer {
+  background: #000;
+  border-top: 2px solid var(--dark-red);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-text {
+  color: var(--primary-red);
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  color: #666;
+  font-style: italic;
+}

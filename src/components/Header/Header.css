@@ -1,0 +1,151 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  border-bottom: 1px solid var(--dark-crimson);
+  box-shadow: 0 4px 30px rgba(139, 0, 0, 0.3);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  color: var(--smoke-white);
+  letter-spacing: 2px;
+}
+
+.logo-accent {
+  font-family: 'Creepster', cursive;
+  font-size: 1.8rem;
+  color: var(--crimson);
+  text-shadow: var(--text-glow);
+  animation: pulse 2s infinite;
+}
+
+.desktop-nav {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-links a, .nav-links span {
+  color: var(--smoke-white);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links a::after, .nav-links span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--crimson);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after, .nav-links span:hover::after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.98);
+  border: 1px solid var(--dark-crimson);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--smoke-white) !important;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.dropdown-menu a:hover {
+  background: var(--dark-crimson);
+  transform: translateX(5px);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--crimson);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+.college-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(220, 20, 60, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.college-logo:hover {
+  transform: scale(1.1);
+}

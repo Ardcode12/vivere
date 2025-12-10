@@ -1,0 +1,82 @@
+.contact-page {
+  min-height: 100vh;
+  padding: 100px 2rem 2rem;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.95) 0%, rgba(74, 4, 4, 0.2) 50%, rgba(10, 10, 10, 0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-title {
+  font-family: "Creepster", cursive;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--crimson);
+  text-shadow: var(--soft-glow);
+  margin-bottom: 1rem;
+  animation: glitch 3s infinite;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--grey-mist);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.contact-card {
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid var(--dark-crimson);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+  box-shadow: 0 5px 20px rgba(220, 20, 60, 0.15);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--crimson);
+  box-shadow: 0 15px 30px rgba(220, 20, 60, 0.3);
+}
+
+.contact-name {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.8rem;
+  color: var(--crimson);
+  margin-bottom: 0.5rem;
+}
+
+.contact-role {
+  font-size: 1rem;
+  color: var(--smoke-white);
+  margin-bottom: 0.5rem;
+}
+
+.contact-phone {
+  font-size: 1rem;
+  color: var(--grey-mist);
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+}
