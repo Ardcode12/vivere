@@ -10,8 +10,6 @@ import Home from './pages/Home/Home';
 import TechEvents from './pages/TechEvents/TechEvents';
 import NonTechEvents from './pages/NonTechEvents/NonTechEvents';
 import EventDetails from './pages/EventDetails/EventDetails';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import ParticlesBackground from './components/ParticlesBackground/ParticlesBackground';
 
@@ -52,8 +50,6 @@ function App() {
               <Route path="/tech-events" element={<TechEvents />} />
               <Route path="/non-tech-events" element={<NonTechEvents />} />
               <Route path="/event/:id" element={<EventDetails />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
           </>

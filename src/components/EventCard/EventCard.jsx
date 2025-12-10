@@ -36,10 +36,7 @@ const EventCard = ({ event, delay }) => {
             <FaCalendar />
             <span>{event.date || 'Coming Soon'}</span>
           </div>
-          <div className="meta-item">
-            <FaMapMarkerAlt />
-            <span>{event.venue || 'TBA'}</span>
-          </div>
+          
         </div>
         
         <Link to={`/event/${event.id}`} className="event-link">

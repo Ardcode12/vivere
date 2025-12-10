@@ -1,16 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaTimes, FaHome, FaLaptopCode, FaGamepad, FaInfoCircle, FaPhone } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import './MobileNav.css';
 
 const MobileNav = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
+  const handleNavClick = (path, hash) => {
+    if (hash) {
+      // If there's a hash, navigate to home first then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+    onClose();
+  };
+
   const menuItems = [
-    { path: '/', label: 'Home', icon: <FaHome /> },
-    { path: '/tech-events', label: 'Tech Events', icon: <FaLaptopCode /> },
-    { path: '/non-tech-events', label: 'Non-Tech Events', icon: <FaGamepad /> },
-    { path: '/about', label: 'About', icon: <FaInfoCircle /> },
-    { path: '/contact', label: 'Contact', icon: <FaPhone /> }
+    { path: '/', label: 'Home', icon: <FaHome />, isLink: true },
+    { path: '/tech-events', label: 'Tech Events', icon: <FaLaptopCode />, isLink: true },
+    { path: '/non-tech-events', label: 'Non-Tech Events', icon: <FaGamepad />, isLink: true },
+    { path: '/', label: 'About', icon: <FaInfoCircle />, hash: '#about' },
+    { path: '/', label: 'Contact', icon: <FaPhone />, hash: '#contact' }
   ];
 
   return (
@@ -43,15 +59,28 @@ const MobileNav = ({ isOpen, onClose }) => {
             <ul className="mobile-nav-links">
               {menuItems.map((item, index) => (
                 <motion.li
-                  key={item.path}
+                  key={item.path + item.label}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link to={item.path} onClick={onClose}>
-                    <span className="nav-icon">{item.icon}</span>
-                    <span className="nav-label">{item.label}</span>
-                  </Link>
+                  {item.hash ? (
+                    <a 
+                      href="#" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(item.path, item.hash);
+                      }}
+                    >
+                      <span className="nav-icon">{item.icon}</span>
+                      <span className="nav-label">{item.label}</span>
+                    </a>
+                  ) : (
+                    <Link to={item.path} onClick={onClose}>
+                      <span className="nav-icon">{item.icon}</span>
+                      <span className="nav-label">{item.label}</span>
+                    </Link>
+                  )}
                 </motion.li>
               ))}
             </ul>

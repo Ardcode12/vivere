@@ -72,13 +72,13 @@ const EventDetails = () => {
             </div>
           </div>
 
-          <div className="info-card" data-aos="fade-up" data-aos-delay="200">
+          {/* <div className="info-card" data-aos="fade-up" data-aos-delay="200">
             <FaMapMarkerAlt className="info-icon" />
             <div>
               <h3>Venue</h3>
               <p>{event.venue || 'Main Auditorium'}</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="info-card" data-aos="fade-up" data-aos-delay="300">
             <FaUsers className="info-icon" />
