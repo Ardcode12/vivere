@@ -143,6 +143,33 @@ const Home = () => {
     />
   </div>
 </section>
+{/* WhatsApp Join Section */}
+<section className="whatsapp-section" data-aos="fade-up">
+  <div className="whatsapp-container">
+    <div className="whatsapp-icon">
+      <FaWhatsapp />
+    </div>
+
+    <h2 className="section-title">
+      <span>Join Our</span>
+      <span className="highlight"> WhatsApp Group</span>
+    </h2>
+
+    <p className="whatsapp-text">
+      Get instant updates, event notifications, rules, and announcements.
+    </p>
+
+    <a
+      href="https://chat.whatsapp.com/BfNQqSdC5eCBAY9DpbcllI?mode=wwt"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-join-btn"
+    >
+      <FaWhatsapp className="btn-icon" />
+      Join WhatsApp Group
+    </a>
+  </div>
+</section>
 
 
       {/* Highlights Section */}

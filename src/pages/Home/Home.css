@@ -580,3 +580,65 @@
     font-size: 1.5rem;
   }
 }
+/* WhatsApp Join Section */
+.whatsapp-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 13, 13, 0.95) 0%,
+    rgba(0, 80, 40, 0.15) 50%,
+    rgba(10, 10, 10, 0.95) 100%
+  );
+  text-align: center;
+}
+
+.whatsapp-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.whatsapp-icon {
+  font-size: 4rem;
+  color: #25D366;
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-text {
+  color: var(--grey-mist);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.whatsapp-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: #108e31;
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-join-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-join-btn .btn-icon {
+  font-size: 1.4rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
