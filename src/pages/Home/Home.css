@@ -622,10 +622,10 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 40px;
-  background: #108e31;
+  background: #790909;
   color: #f5f5f5;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 10px 30px rgba(158, 2, 15, 0.806);
 }
 
 .whatsapp-join-btn:hover {
