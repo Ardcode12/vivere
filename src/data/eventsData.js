@@ -20,8 +20,8 @@ export const techEventsData = [
       "Plagiarism will lead to immediate disqualification",
       "Further details will be given on the whatsapp group"
     ],
-    coordinator1: { name: "Dharun Vidyakar", phone: "+91 98765 43210" },
-    coordinator2: { name: "Prof. John Doe", phone: "+91 87654 32109" }
+    coordinator1: { name: "Dharun Vidyakar", phone: "+91 86107 08272" },
+    coordinator2: { name: "Hansiga", phone: "+91 75388 09125" }
   },
   {
     id: 2,
@@ -47,8 +47,8 @@ export const techEventsData = [
       "Further details will be given on the whatsapp group"
 
     ],
-    coordinator1: { name: "Alex Kumar", phone: "+91 99887 76655" },
-    coordinator2: { name: "Rita Sharma", phone: "+91 88776 65544" }
+    coordinator1: { name: "Santhosh", phone: "+91 63817 86149" },
+    coordinator2: { name: "Rajeshwari", phone: "+91 94442 01273" }
   },
   {
     id: 3,
@@ -72,8 +72,8 @@ export const techEventsData = [
       "Further details will be given on the whatsapp group"
 
     ],
-    coordinator1: { name: "Alex Kumar", phone: "+91 99887 76655" },
-    coordinator2: { name: "Rita Sharma", phone: "+91 88776 65544" }
+    coordinator1: { name: "Yunus", phone: "+91 70104 99316" },
+    coordinator2: { name: "Kanimozhi", phone: "+91 79042 67478" }
   }
 ];
 
@@ -99,8 +99,8 @@ export const nonTechEventsData = [
   "Further details will be given on the whatsapp group"      
 
     ],
-    coordinator1: { name: "Alex Kumar", phone: "+91 99887 76655" },
-    coordinator2: { name: "Rita Sharma", phone: "+91 88776 65544" }
+    coordinator1: { name: "Dharun prakash", phone: "+91 88389 53935" },
+    
   },
   {
     id: 5,
@@ -124,8 +124,8 @@ export const nonTechEventsData = [
       "Further details will be given on the whatsapp group"
 
     ],
-    coordinator1: { name: "Alex Kumar", phone: "+91 99887 76655" },
-    coordinator2: { name: "Rita Sharma", phone: "+91 88776 65544" }
+    coordinator1: { name: "Dharanish", phone: "+91 63799 68533" },
+    
   }
 ];
 

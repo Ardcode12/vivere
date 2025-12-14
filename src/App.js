@@ -12,6 +12,7 @@ import NonTechEvents from './pages/NonTechEvents/NonTechEvents';
 import EventDetails from './pages/EventDetails/EventDetails';
 import Footer from './components/Footer/Footer';
 import ParticlesBackground from './components/ParticlesBackground/ParticlesBackground';
+import ScrollToTop from './components/ScrollToTop';
 
 import { shouldShowLoading, setLastVisit } from './utils/storage';
 
@@ -23,14 +24,13 @@ function App() {
       duration: 1000,
       once: false,
       mirror: true,
-      offset: 100
+      offset: 100,
     });
 
-    // Always show loading screen for now
     const shouldShow = shouldShowLoading();
     if (shouldShow) {
       setLastVisit();
-      setTimeout(() => setShowLoading(false), 4000); // 4 seconds loading time
+      setTimeout(() => setShowLoading(false), 4000);
     } else {
       setShowLoading(false);
     }
@@ -38,6 +38,8 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
+
       <div className="App">
         {showLoading ? (
           <LoadingScreen />
@@ -45,12 +47,14 @@ function App() {
           <>
             <ParticlesBackground />
             <Header />
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/tech-events" element={<TechEvents />} />
               <Route path="/non-tech-events" element={<NonTechEvents />} />
               <Route path="/event/:id" element={<EventDetails />} />
             </Routes>
+
             <Footer />
           </>
         )}
