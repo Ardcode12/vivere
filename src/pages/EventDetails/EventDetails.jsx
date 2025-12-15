@@ -84,7 +84,7 @@ const EventDetails = () => {
             <FaUsers className="info-icon" />
             <div>
               <h3>Team Size</h3>
-              <p>{event.teamSize || '1–4 Members'}</p>
+              <p>{event.teamSize }</p>
             </div>
           </div>
         </div>
@@ -111,18 +111,27 @@ const EventDetails = () => {
           </section>
 
           <section className="content-section" data-aos="fade-up">
-            <h2>Contact</h2>
-            <div className="contact-cards">
-              <div className="contact-card">
-                <h4>{event.coordinator1?.name || 'John Doe'}</h4>
-                <p>{event.coordinator1?.phone || '+91 98765 43210'}</p>
-              </div>
-              <div className="contact-card">
-                <h4>{event.coordinator2?.name || 'Jane Smith'}</h4>
-                <p>{event.coordinator2?.phone || '+91 87654 32109'}</p>
-              </div>
-            </div>
-          </section>
+  <h2>Contact</h2>
+
+  <div className="contact-cards">
+    {/* Coordinator 1 (always shown) */}
+    {event.coordinator1 && (
+      <div className="contact-card">
+        <h4>{event.coordinator1.name}</h4>
+        <p>{event.coordinator1.phone}</p>
+      </div>
+    )}
+
+    {/* Coordinator 2 (only if exists) */}
+    {event.coordinator2?.name && event.coordinator2?.phone && (
+      <div className="contact-card">
+        <h4>{event.coordinator2.name}</h4>
+        <p>{event.coordinator2.phone}</p>
+      </div>
+    )}
+  </div>
+</section>
+
 
           {/* 🔽 Register Now → event-specific Google Form */}
           <motion.button
